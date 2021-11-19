@@ -1,26 +1,27 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, SafeAreaView, View } from 'react-native';
 import Calculator from './src/components/molecules/Calculator';
 
 export default function App() {
-
   return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
+    <SafeAreaView style={styles.container}>
+      <StatusBar 
+        animated={true}
+        backgroundColor="#ffffff"
+        style="auto" 
+      />
       <View style={[styles.wrapperCalculator, styles.shadowProp]}>
         <Calculator />
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#222831",
   },
   wrapperCalculator: {
     borderRadius: 5
